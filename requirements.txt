@@ -1,0 +1,8 @@
+pyyaml
+django
+opencv-python
+djangorestframework
+numpy
+imagehash
+pillow
+redis
