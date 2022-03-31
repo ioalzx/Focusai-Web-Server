@@ -1,0 +1,29 @@
+version: 1
+
+formatters:
+  default:
+    format: "%(asctime)s %(levelname)s [%(processName)s-%(threadName)s] %(module)s.%(funcName)s: %(message)s"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: default
+
+  file:
+    class: logging.handlers.TimedRotatingFileHandler
+    level: DEBUG
+    filename: logs/focusai_webserver.log
+    when: midnight
+    encoding: utf-8
+    formatter: default
+
+loggers:
+  focusai_webserver:
+    handlers: [console, file]
+    level: DEBUG
+  root:
+    handlers: [file]
+    level: INFO
+
+disable_existing_loggers: false

@@ -1,0 +1,10 @@
+redis:
+  address: 34.136.73.59
+  port: 6379
+  password: 2022ece496t420
+  topic: testTaskRes
+  id_key: focusairequestid
+  session_key: focusaisession
+kafka:
+  address: 34.136.73.59:9092
+  topic: testTask
